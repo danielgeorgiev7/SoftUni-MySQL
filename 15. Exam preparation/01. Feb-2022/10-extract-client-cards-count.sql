@@ -16,5 +16,7 @@ BEGIN
     RETURN count_result;
 END $
 
+DELIMITER ;
+
 SELECT c.first_name,c.last_name, udf_customer_products_count('Shirley') as `total_products` FROM customers c
 WHERE c.first_name = 'Shirley';
